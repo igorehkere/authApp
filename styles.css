@@ -15,9 +15,6 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
 }
-.welcome {
-   
-}
 .welcome p {
     color: black;
     font-size: 32px;
@@ -90,9 +87,6 @@ body {
     transform: translateX(0);
      /*Включить  */
 }
-.container.show-register .illustrate {
-    transform: translateX(-100%); /* Переезжает влево */
-}
 #butLog {
     height: 47px;
     width: 413px;
@@ -132,18 +126,18 @@ body {
     background-color: rgb(255, 255, 255);
     height: 580px;
     width: 543px;
-    left: 50%; /* Начинаем с правой стороны */
+    left: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;  
     border-radius: 40px;
     transition: transform 0.9s ease;
     z-index: 2;
-    transform: translateX(0); /* Начальное положение */
+    transform: translateX(0); 
 }
 
 .container.show-register .illustrate {
-    transform: translateX(-100%); /* Переезжает влево */
+    transform: translateX(-100%); 
 }
 #log, #reg {
     color: #6358DC;

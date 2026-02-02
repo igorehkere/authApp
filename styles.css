@@ -1,0 +1,190 @@
+body {
+    height: 809px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #48355B, #91BEF3);
+}
+.container {
+    height: 580px;
+    width: 1086px;
+    background-color: white;
+    display: flex;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.welcome {
+   
+}
+.welcome p {
+    color: black;
+    font-size: 32px;
+    margin: 0 0 5px 0;
+}
+.welcome h1 {
+    color: #6358DC;
+    font-size: 32px;
+    margin: 5px 0 0 0;
+}
+.container-login {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    justify-content: space-around;
+    align-items: center;
+}
+.container-register {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    width: 50%;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 0;
+}
+
+.input {
+    background-color: #ECECEC;
+    height: 47px;
+    width: 413px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    margin: 5px 0 5px 0;
+}
+.input input{
+    height: 47px;
+    width: 323px;
+    background-color: transparent;
+    border: none;
+    font-size: medium;
+}
+.input input:focus {
+    outline: none;
+}
+.check input {
+    border-radius: 50%;
+}
+#eye:hover {
+    cursor: pointer;
+}
+.illustrate {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 580px;
+    width: 543px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 40px;
+    animation: transform 0.3s ease;
+    z-index: 2;
+    opacity: 1;  
+    transform: translateX(0);
+     /*Включить  */
+}
+.container.show-register .illustrate {
+    transform: translateX(-100%); /* Переезжает влево */
+}
+#butLog {
+    height: 47px;
+    width: 413px;
+    border-radius: 15px;
+    background-color: #6358DC;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+#butLog:hover {
+    cursor: pointer;
+    background-color: #4840a1;
+    transition: background-color 0.1s ease-in;
+}
+#butReg {
+    height: 47px;
+    width: 413px;
+    border-radius: 15px;
+    background-color: #6358DC;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+#butReg:hover {
+    cursor: pointer;
+    background-color: #4840a1;
+    transition: background-color 0.1s ease-in;
+}
+
+#non {
+    opacity: 0;
+}
+.illustrate {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 580px;
+    width: 543px;
+    left: 50%; /* Начинаем с правой стороны */
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 40px;
+    transition: transform 0.9s ease;
+    z-index: 2;
+    transform: translateX(0); /* Начальное положение */
+}
+
+.container.show-register .illustrate {
+    transform: translateX(-100%); /* Переезжает влево */
+}
+#log, #reg {
+    color: #6358DC;
+}
+#log, #reg:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* Анимация */
+.container-login {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    justify-content: space-around;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.container-register {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    width: 50%;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 0;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    right: 0;
+}
+
+.container.show-register .container-login {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container.show-register .container-register {
+    opacity: 1;
+    pointer-events: all;
+}
